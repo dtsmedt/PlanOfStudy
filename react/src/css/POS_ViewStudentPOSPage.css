@@ -1,0 +1,209 @@
+.view-pos-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Header */
+.view-pos-header {
+  margin-bottom: 16px;
+  /*text-align: center;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view-pos-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.view-pos-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Summary text under header */
+.view-plan-summary {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.view-plan-summary p {
+  margin: 0 0 4px 0;
+}
+
+.view-plan-details {
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Section titles */
+.view-section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
+/* Empty state text */
+.view-empty {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Term-group layout to match student page */
+.term-group {
+  margin-bottom: 24px;
+}
+
+.term-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.term-group-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Shared table wrapper */
+.table-wrap {
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.table-wrap .table {
+  width: 100%;
+}
+
+.view-transfer-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 24px 0 8px 0;
+}
+
+/* Transfer courses area */
+.transfer-wrap {
+  margin-top: 28px;
+}
+
+/* Committee summary at bottom */
+.view-committee-summary {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 2px solid #e3e3e3;
+}
+
+.view-committee-summary h3 {
+  margin: 8px 0 6px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.view-committee-chair {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.view-committee-members-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 12px 0 6px 0;
+}
+
+.view-committee-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.view-committee-list li {
+  margin-bottom: 4px;
+}
+
+/* Comment + status section (no inline styles) */
+.view-comment-box {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.view-status-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.view-status-note {
+  color: #dc3545;
+  font-weight: 700;
+  margin: 0;
+}
+
+.view-status-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.view-status-button {
+  margin: 0;
+}
+
+/* Mobile tweaks */
+@media (max-width: 900px) {
+  .view-pos-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .view-status-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.view-table-empty {
+  text-align: center;
+}
+
+/* Header details (PID, name, degree) under description */
+.view-plan-details {
+  margin-top: 12px;
+}
+
+.view-plan-details p {
+  margin: 0 0 4px 0;
+}
+
+/* Planned Courses + History header row */
+.view-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.view-section-title {
+  margin: 0;
+}
+
+/* Committee chair heading */
+.view-committee-chair-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}

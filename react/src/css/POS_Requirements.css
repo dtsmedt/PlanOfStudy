@@ -1,0 +1,134 @@
+.pos-container {
+  display: flex;
+  gap: 1rem; /* tighten gap so main content gets more room */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  align-items: flex-start;
+}
+
+.requirements-panel {
+  flex: 0 0 220px; /* narrower so courses can fill more space */
+  background: #f8f9fa;
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  position: sticky;
+  top: 1rem;
+}
+
+.requirements-panel h3 {
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+.requirement-section {
+  margin-bottom: 1.5rem;
+}
+
+.requirement-section h4 {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.requirement-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.requirement-item .check {
+  color: #28a745;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.requirement-item .pending {
+  color: #ffc107;
+}
+
+.requirement-item .failed {
+  color: #dc3545;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0; /* Prevent flex item from overflowing */
+}
+
+/* Make tables and content take more horizontal space inside main column */
+.main-content .table-wrap {
+  width: 100%;
+}
+
+/* Centered header above the two-column layout */
+.center-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  padding: 0 1rem;
+}
+
+/* Centered header above the two-column layout */
+.center-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  padding: 0 1rem;
+}
+
+.center-header .main-title {
+  margin-bottom: 0.25rem;
+}
+
+.center-header .page-description {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Tighter list formatting so bullets sit next to their text and are centered as a unit */
+.center-header .page-description ul {
+  display: inline-block; /* lets the whole list center */
+  text-align: left; /* keep list items left-aligned inside */
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.2rem; /* normal bullet indent */
+}
+.center-header .page-description ul li {
+  margin-bottom: 0.35rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .pos-container {
+    flex-direction: column;
+  }
+  
+  .requirements-panel {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+}
+
+.requirement-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}

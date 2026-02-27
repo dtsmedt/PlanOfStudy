@@ -1,0 +1,295 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.main-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.page-description {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.page-description ul {
+  margin-top: 8px;
+  margin-left: 24px;
+  list-style-type: disc;
+}
+
+/* Top header bar: three sections in one row */
+.header {
+  margin-bottom: 16px;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Left title */
+.title {
+  margin: 0;
+  font-weight: 600;
+  flex: 1;
+  text-align: left;
+}
+
+/* Center MS / PhD buttons */
+.degree-toggle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Right History button */
+.history-bar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.term-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 0px;
+}
+
+.term-group-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.transfer-wrap {
+  margin-top: 28px;
+}
+
+/* Table */
+.table-wrap {
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.table-wrap .table {
+  width: 100%;
+}
+
+.table select {
+  max-width: 320px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* Truncate long text inside select when displayed */
+.table option {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.add-course-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -6px;
+  margin-left: 30px;
+}
+
+.add-term-bar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.credits-total {
+  text-align: right;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  border-top: 2px solid #e3e3e3;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.committee-chair-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.committee-chair-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Committee Chair */
+.committee-chair {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'label .'
+    'select .';
+  align-items: start;
+  gap: 10px 16px;
+}
+
+.committee-chair-select {
+  grid-area: select;
+  max-width: 260px;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.note {
+  font-size: 14px;
+  color: #dc3545; /* red */
+  font-weight: 700;
+}
+
+/* Committee */
+.committee {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.committee-title {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.committee-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr)) auto;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.remove-member {
+  white-space: nowrap;
+}
+
+.committee-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+/* Save / Submit */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .committee-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .credits {
+    justify-content: flex-start;
+  }
+}
+
+.dropdown-with-error {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Red star for sections that contain errors */
+.error-star {
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+/* Submit button styling */
+.submit-btn {
+  margin-left: 8px;
+}
+
+/* Disabled state for submit button */
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ----------------- STUDENT SEARCH PAGE -------------------------------- */
+
+/* Main container spacing */
+.faculty-pending-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.faculty-pending-page h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Search bar */
+.faculty-pending-page .search-bar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faculty-pending-page .search-bar input {
+  max-width: 180px; 
+  padding: 0.18rem 0.40rem;
+  line-height: 1.0;
+  height: 1.6rem;
+}
+
+/* Filter bar */
+.faculty-pending-page .filter-bar {
+  padding: 0;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Table wrapper */
+.faculty-pending-page .table-wrap {
+  padding: 0;
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+/* Table spacing */
+.faculty-pending-page table {
+  width: 100%;
+}

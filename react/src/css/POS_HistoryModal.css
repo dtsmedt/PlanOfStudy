@@ -1,0 +1,151 @@
+/* Right History button container */
+.history-bar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Modal Backdrop */
+.history-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  z-index: 1000;
+}
+
+/* Modal Window */
+.history-modal__window {
+  background: #fff;
+  width: min(100%, 1000px);
+  max-height: 80vh;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.20);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Modal Header */
+.history-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.history-modal__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Modal Body */
+.history-modal__body {
+  padding: 14px;
+  overflow: auto;
+  max-height: calc(80vh - 58px);
+}
+
+/* Table Container */
+.history-table-wrap {
+  margin: 0;
+  overflow: auto;
+}
+
+/* Messages */
+.history-panel__loading,
+.history-panel__empty,
+.history-panel__error {
+  padding: 8px 0;
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+.history-panel__error {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .history-modal__window {
+    width: 100%;
+    max-height: 85vh;
+  }
+}
+
+/* Focus outline accessibility */
+.history-modal__window :focus-visible {
+  outline: 2px solid rgba(0, 123, 255, 0.35);
+  outline-offset: 2px;
+}
+
+/* Clean, borderless, compact table with white/grey striping */
+.history-table-wrap table {
+  width: 100%;
+  background: #ffffff;
+  border-collapse: collapse; /* removes spacing & gaps */
+}
+
+/* Header — no borders */
+.history-table-wrap thead th {
+  background: #ffffff;
+  font-weight: 600;
+  padding: 10px 12px;
+  border: none !important;
+  color: #333;
+}
+
+/* Body cells — no borders */
+.history-table-wrap tbody td {
+  padding: 10px 12px;
+  border: none !important;
+}
+
+/* White & grey stripe rows */
+.history-table-wrap .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #ffffff !important; /* white */
+}
+
+.history-table-wrap .table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #f5f5f5 !important; /* light grey */
+}
+
+/* Remove Bootstrap hover */
+.history-table-wrap table tbody tr:hover {
+  background: inherit !important;
+  transition: none;
+}
+
+/* Remove any lingering borders on table, rows, or cells */
+.history-table-wrap table,
+.history-table-wrap tr,
+.history-table-wrap td,
+.history-table-wrap th {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.history-header--sortable {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.history-header--sortable span {
+  vertical-align: middle;
+}
+
+.history-sort-indicator {
+  font-size: 0.75em;
+  margin-left: 4px;
+  opacity: 0.7;
+}
